@@ -25,11 +25,13 @@
 				function checkConnection() {  
 					var networkState = navigator.network.connection.type;  
 					if (networkState == Connection.UNKNOWN || networkState == Connection.NONE || networkState == null) {  
+						document.getElementById('vmf1').innerHTML = 'Nie masz dostępu do internetu.';
 						return false;	
-					}  
-					document.body.innerhtml = '<iframe src="http://vmf1.pl/app/" style="overflow:hidden;" frameborder="0" width="100%" height="100%"scrolling="no"></iframe>';
+					}
+					document.getElementById('vmf1').innerHTML = '<iframe src="http://vmf1.pl/app/" style="overflow:hidden;" frameborder="0" width="100%" height="100%"scrolling="no"></iframe>';					
 					return true;  
 				}  
-		</script>	 
+		</script>
+			<span id="vmf1"> </span>
     </body>
 </html>
